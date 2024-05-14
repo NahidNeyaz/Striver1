@@ -23,6 +23,23 @@ int sl1(vector<int>&arr)
 }
 
 
+//find the largest and then assigned it
+int sl2(vector<int>&arr)
+{
+    int l=arr[0];
+    int sl=-1;
+    for(auto it=arr.begin();it!=arr.end();it++)
+    {
+        if(*(it)>l)
+        {
+            sl=l;
+            l=*(it);
+        }
+    }
+    return(sl);
+}
+
+
 
 
 int main()
@@ -34,7 +51,8 @@ int main()
     {
         cin>>arr[i];
     }
-    int m=sl1(arr);
-    cout<<m<<endl;
+    int m1=sl1(arr);
+    int m2=sl2(arr);
+    cout<<m2<<endl;
     
 }
